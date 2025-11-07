@@ -15,8 +15,9 @@ let feedbacks = [];
 app.post('/api/feedback', (req, res) => {
     const { username, message } = req.body;
     const timestamp = new Date().toISOString();
-    feedbacks.push({ username, message, timestamp });
-    res.status(201).send({ message: 'Feedback submitted successfully' });
+    const feedback = { username, message, timestamp };
+    feedbacks.push(feedback);
+    res.status(201).send({ message: 'Feedback submitted successfully', feedback });
 });
 
 // Route to retrieve feedback
