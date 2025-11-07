@@ -11,14 +11,14 @@ app.use(bodyParser.json());
 
 let feedbacks = [];
 
-// Route pour soumettre des retours
+// Route to submit feedback
 app.post('/api/feedback', (req, res) => {
     const { username, message } = req.body;
     feedbacks.push({ username, message });
-    res.status(201).send({ message: 'Retour soumis avec succès' });
+    res.status(201).send({ message: 'Return submitted successfully' });
 });
 
-// Route pour récupérer les retours
+// Route to retrieve feedback
 app.get('/api/feedback', (req, res) => {
     res.status(200).send(feedbacks);
 });
