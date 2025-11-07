@@ -14,6 +14,9 @@ let feedbacks = [];
 // Route to submit feedback
 app.post('/api/feedback', (req, res) => {
     const { username, message } = req.body;
+    if (!username || !message) {
+        return res.status(400).send({ message: 'Username and message are required.' });
+    }
     const timestamp = new Date().toISOString();
     const feedback = { username, message, timestamp };
     feedbacks.push(feedback);
