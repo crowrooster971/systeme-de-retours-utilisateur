@@ -24,5 +24,5 @@ app.get('/api/feedback', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Serveur en écoute sur le port ${PORT}`);
+    console.log(`Server is listening on port ${PORT}`);
 });
