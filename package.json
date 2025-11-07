@@ -1,6 +1,6 @@
 {
   "name": "systeme-de-retours-utilisateur",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Système pour collecter les retours des utilisateurs.",
   "main": "index.js",
   "scripts": {
