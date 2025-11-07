@@ -15,7 +15,7 @@ let feedbacks = [];
 app.post('/api/feedback', (req, res) => {
     const { username, message } = req.body;
     feedbacks.push({ username, message });
-    res.status(201).send({ message: 'Return submitted successfully' });
+    res.status(201).send({ message: 'Feedback submitted successfully' });
 });
 
 // Route to retrieve feedback
